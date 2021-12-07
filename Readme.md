@@ -10,7 +10,9 @@
 
 ## 参照
 感谢ML.Net库Issus中诸位大神的方法。
+
 https://github.com/dotnet/machinelearning-modelbuilder/issues/967
+
 https://github.com/dotnet/machinelearning-modelbuilder/issues/851
 
 ## 推荐
@@ -77,9 +79,8 @@ https://github.com/dotnet/machinelearning-modelbuilder/issues/851
   将原来本地文件夹里的图像文件，转换成新的数据样本，以便后续进行训练
   ```c#
   //读取原来的样本图像，转换为新的模型输入类型集合
-  var input1 = Directory.GetFiles("/Img/Front/").Select(f => new ModelInputBytes() { Label = "Front", 
-                    ImageSource = GetMatBytes(f)}).ToList();
-  var input2 = Directory.GetFiles("/Img/Reverse").Select(f => new ModelInputBytes() { Label = "Reverse", 						ImageSource = GetMatBytes(f)}).ToList();
+  var input1 = Directory.GetFiles("/Img/Front/").Select(f => new ModelInputBytes() { Label = "Front", ImageSource = GetMatBytes(f)}).ToList();
+  var input2 = Directory.GetFiles("/Img/Reverse").Select(f => new ModelInputBytes() { Label = "Reverse",ImageSource = GetMatBytes(f)}).ToList();
   input1.AddRange(input2);
   //从集合加载，生成新的数据样本
   IDataView newData = mlContext.Data.LoadFromEnumerable<ModelInputBytes>(input1);
