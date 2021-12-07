@@ -98,7 +98,7 @@ https://github.com/dotnet/machinelearning-modelbuilder/issues/851
   //更改trainData类型，并调用该方法重新训练
   public static ITransformer RetrainPipelineBytes(MLContext context, IDataView trainData)
   {
-  	var trainingPipeline = context.Transforms.Conversion.MapValueToKey(@"Label", @"Label")                                  .Append(context.MulticlassClassification.Trainers.ImageClassification(labelColumnName: @"Label"))              .Append(context.Transforms.Conversion.MapKeyToValue(@"PredictedLabel", @"PredictedLabel"));       
+  	var trainingPipeline = context.Transforms.Conversion.MapValueToKey(@"Label", @"Label").Append(context.MulticlassClassification.Trainers.ImageClassification(labelColumnName: @"Label")).Append(context.Transforms.Conversion.MapKeyToValue(@"PredictedLabel", @"PredictedLabel"));       
   	var model = trainingPipeline.Fit(trainData);
   	return model;
   }
