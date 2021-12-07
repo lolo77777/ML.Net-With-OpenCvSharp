@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Data\Image\Front\" />
+    <Folder Include="Data\Image\Reverse\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.6.0" />
+    <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="1.6.0" />
+    <PackageReference Include="Microsoft.ML.Vision" Version="1.6.0" />
+    <PackageReference Include="SciSharp.TensorFlow.Redist" Version="2.3.1" />
+  </ItemGroup>
+  <ItemGroup Label="MLModelSample">
+    <None Include="MLModelSample.consumption.cs">
+      <DependentUpon>MLModelSample.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLModelSample.training.cs">
+      <DependentUpon>MLModelSample.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLModelSample.zip">
+      <DependentUpon>MLModelSample.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
