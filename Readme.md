@@ -8,6 +8,11 @@
 |OpencvSharp|[OpencvSharp](https://github.com/shimat/opencvsharp_samples)|
 |ML.Net|[ML.Net](https://github.com/dotnet/machinelearning-modelbuilder)|
 
+## 参照
+感谢ML.Net库Issus中诸位大神的方法。
+https://github.com/dotnet/machinelearning-modelbuilder/issues/967
+https://github.com/dotnet/machinelearning-modelbuilder/issues/851
+
 ## 推荐
 >交流讨论QQ群:827888895  
 其它项目： 
